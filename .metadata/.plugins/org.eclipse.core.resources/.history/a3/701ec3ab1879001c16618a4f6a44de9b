@@ -1,0 +1,14 @@
+
+public class DataTypes {
+
+	public static void main(String[] args) {
+		
+		byte v1=127; //-128 to 127 //1byte
+		short v2=31000; // 2bytes  -32768...32767
+		int v3=123456; //4 bytes
+		long v4=218364754;
+		System.out.println(Long.MIN_VALUE);
+
+	}
+
+}

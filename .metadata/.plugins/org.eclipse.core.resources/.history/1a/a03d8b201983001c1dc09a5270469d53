@@ -1,0 +1,17 @@
+package com.zensar.training.ui;
+
+import java.util.function.Consumer;
+
+public class Main1 {
+	public static void main(String[] args) {
+		Consumer<String> consumer1;
+		
+		consumer1=(s)->{
+			System.out.println(s.length());
+		};
+		consumer1.accept("Zensar");
+		
+		Consumer<String> consumer2=(s)->System.out.println(s.toUpperCase());
+		
+	}
+}

@@ -1,0 +1,15 @@
+
+public class IfDemo {
+	public static void main(String[] args) {
+		int a;
+		a=65;
+		
+		if(a<100) {
+			
+			System.out.println("Welcome");
+			
+		}
+		
+	}
+
+}

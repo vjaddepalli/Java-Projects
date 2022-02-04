@@ -1,0 +1,35 @@
+package com.zensar.training.ui;
+
+import java.io.RandomAccessFile;
+import java.util.List;
+
+import com.zensar.training.bean.CollectionFactory;
+import com.zensar.training.bean.Customer;
+
+public class RandomAccessFileTask implements Runnable {
+
+	@Override
+	public void run() {
+		List<Customer> customers = CollectionFactory.getCustomerList();
+
+		try {
+			RandomAccessFile accessFile = new RandomAccessFile("customers.dat", "rw");
+
+			for (Customer customer : customers) {
+				accessFile.writeUTF(customer.getName());
+				accessFile.writeDouble(customer.getBalanceAmount());
+				accessFile.writeUTF(customer.getCity());
+			}
+			int count=0;
+			while(accessFile.readLine()!=null) {
+				count++;
+			}
+			System.out.println(Thread.currentThread().getName()+" : No.of Lines: "+count);
+			accessFile.close();
+
+		} catch (Exception e) {
+			
+		}
+	}
+
+}

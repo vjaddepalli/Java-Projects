@@ -1,0 +1,15 @@
+package pack2;
+
+import pack1.A;
+
+public class E extends A {
+	
+	public void test3() {
+		System.out.println(v1);
+		
+	}
+	public void test4() {
+		
+	}
+
+}

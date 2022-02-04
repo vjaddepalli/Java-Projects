@@ -1,0 +1,26 @@
+package com.zensar.training.client;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+
+		// Step1: load driver class
+		try {
+
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver Loaded...");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		//Step2: Connect to Databse
+		Connection connection;
+		String url="jdbc:mysql:localhost";
+		connection=DriverManager.getConnection(null, null, null)
+
+	}
+
+}

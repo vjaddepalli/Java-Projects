@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 packages to &apos;36-Generics/src&apos;&#x0D;&#x0A;- Original project: &apos;32-StackImplementation&apos;&#x0D;&#x0A;- Destination element: &apos;36-Generics/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     32-StackImplementation/src/com.zensar.training.bean&#x0D;&#x0A;     32-StackImplementation/src/com.zensar.training.ui" description="Copy packages" destination="=36-Generics/src" element1="/src&lt;com.zensar.training.bean" element2="/src&lt;com.zensar.training.ui" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1643273091428" version="1.0"/>
+</session>

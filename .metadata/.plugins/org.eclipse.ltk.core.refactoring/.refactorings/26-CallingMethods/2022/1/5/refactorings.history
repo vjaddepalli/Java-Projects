@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Demo.java&apos; to &apos;com.zensar.training.ui.Main.java&apos;&#x0D;&#x0A;- Original project: &apos;26-CallingMethods&apos;&#x0D;&#x0A;- Destination element: &apos;com.zensar.training.ui.Main.java&apos;&#x0D;&#x0A;- Original element: &apos;com.zensar.training.bean.Demo.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;com.zensar.training.ui{Main.java" element1="/src&lt;com.zensar.training.bean{Demo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1643086447629" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,8 @@
+package com.zensar.training.bean;
+
+@FunctionalInterface
+public interface Executable {
+	
+	void execute(Integer i);
+
+}

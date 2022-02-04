@@ -1,0 +1,21 @@
+package com.zensar.training.bean;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		A obj=new A();
+		obj.m1(10);
+		obj.m1(10,20);
+		
+		byte b1=100;
+		short b2=200;
+		
+		obj.m1(b1);
+		obj.m1(b1,b2);
+		
+		
+
+	}
+
+}

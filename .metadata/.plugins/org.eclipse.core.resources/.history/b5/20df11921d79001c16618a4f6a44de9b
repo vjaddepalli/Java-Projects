@@ -1,0 +1,13 @@
+
+public class TypeCasting {
+
+	public static void main(String[] args) {
+		
+		int age;
+		float v2=4000.00F;
+		age =(int) v2; //explicit typecasting
+		
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.zensar.training.ui;
+
+import com.zensar.training.bean.Executable;
+
+public class Main4 {
+
+	public static void main(String[] args) {
+		
+		Executable<String > executable;
+		executable=(String s)->{
+			System.out.println(s.toUpperCase());
+		};
+		
+		executable.execute("zensar");
+
+	}
+
+}

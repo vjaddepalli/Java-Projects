@@ -1,0 +1,24 @@
+
+public class Main2 {
+
+	public static void main(String[] args) {
+
+		double[] prices = { 10.0, 5.0, 7.0, 8.0 };
+		double sum = 0;
+		double max=0;
+		double min;
+		for (double d : prices) {
+
+			double temp=d;
+			if(temp<d) {
+				max=d;
+			}
+			sum = sum + d;
+
+		}
+
+		System.out.println("Max: "+max);
+		System.out.println("Sum: " + sum);
+	}
+
+}

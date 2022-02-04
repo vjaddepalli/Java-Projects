@@ -1,0 +1,15 @@
+package com.zensar.training.ui;
+
+import java.io.RandomAccessFile;
+
+public class Main3 {
+
+	public static void main(String[] args) {
+		
+		RandomAccessFile accessFile;
+		
+		accessFile=new RandomAccessFile("intro.txt", "r");
+
+	}
+
+}

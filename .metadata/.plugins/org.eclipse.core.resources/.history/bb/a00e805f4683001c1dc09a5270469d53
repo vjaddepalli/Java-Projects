@@ -1,0 +1,23 @@
+package com.zensar.training.ui;
+
+import java.util.List;
+import java.util.stream.Stream;
+
+import com.zensar.training.bean.CollectionFactory;
+import com.zensar.training.bean.Student;
+
+public class Main3 {
+
+	public static void main(String[] args) {
+
+		List<Student> students = CollectionFactory.getStudentList();
+
+		Stream<Student> stdStream = students.stream();
+
+		stdStream.forEach((s) -> {
+			System.out.println(s.getRollNo() + "\t" + s.getName());
+		});
+
+	}
+
+}

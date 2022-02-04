@@ -1,0 +1,13 @@
+package com.zensar.training.ui;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+public class Main4 {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		RandomAccessFile accessFile=new RandomAccessFile("marks.dat", "rw");
+
+	}
+
+}

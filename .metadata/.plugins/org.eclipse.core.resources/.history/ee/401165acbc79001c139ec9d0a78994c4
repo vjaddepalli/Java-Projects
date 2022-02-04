@@ -1,0 +1,20 @@
+
+public class EmpClient {
+
+	public static void main(String[] args) {
+		
+		Employee e1=new Employee();
+		e1.basicSalary=28000;
+		System.out.println(".......Employee One Details.......");
+		System.out.println("Allownce: "+e1.getAllowance());
+		System.out.println("Net Salary: "+e1.getNetSalary());
+		
+		Employee e2=new Employee();
+		e2.basicSalary=12000;
+		System.out.println(".......Employee Two Details.......");
+		System.out.println("Allowance: "+e2.getAllowance());
+		System.out.println("Net Salary: "+e2.getNetSalary());
+
+	}
+
+}

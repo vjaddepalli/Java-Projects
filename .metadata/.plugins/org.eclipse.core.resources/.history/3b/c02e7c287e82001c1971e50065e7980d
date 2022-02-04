@@ -1,0 +1,20 @@
+package com.zensar.training.ui;
+
+import com.zensar.training.bean.Loan;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		Loan loan;
+		loan=new Loan() {
+
+			@Override
+			public double getInterestRate() {
+				return 0;
+			}
+			
+		}
+
+	}
+
+}

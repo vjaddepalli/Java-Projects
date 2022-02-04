@@ -1,0 +1,15 @@
+package com.zensar.training.ui;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+import com.zensar.training.bean.Circle;
+
+public class Main1 {
+	public static void main(String[] args) {
+		
+		Circle circle=new Circle(10);
+		OutputStream os=new FileOutputStream("circle.dat");
+
+	}
+}

@@ -1,0 +1,13 @@
+package com.zensar.training.ui;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class Main4 {
+
+	public static void main(String[] args) {
+		InputStream is=new FileInputStream("employees.dat");
+
+	}
+
+}

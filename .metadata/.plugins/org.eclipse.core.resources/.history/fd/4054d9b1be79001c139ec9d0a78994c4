@@ -1,0 +1,14 @@
+
+public class Employee {
+
+	double basicSalary;
+
+	double getAllowance() {
+		return basicSalary * 35.0 / 100.0;
+	}
+
+	double getNetSalary() {
+		return basicSalary + (basicSalary * 35.0 / 100.0);
+	}
+
+}

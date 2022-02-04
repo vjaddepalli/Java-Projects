@@ -1,0 +1,15 @@
+
+public class CircleClient {
+
+	public static void main(String[] args) {
+		
+		Circle c1;
+		c1=new Circle();
+		c1.radius=10;
+		double area=c1.getArea();
+		System.out.println("Area of Circle: "+area);
+		
+
+	}
+
+}

@@ -1,0 +1,14 @@
+
+public class Circle {
+	int radius;
+	
+	Circle(){
+		
+	}
+	
+	double getArea() {
+		final double PI=3.14;
+		return PI*this.radius*this.radius;
+	}
+
+}

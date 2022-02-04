@@ -1,0 +1,54 @@
+package com.zensar.training.db;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.time.LocalDate;
+import java.util.List;
+
+import com.zensar.training.bean.Employee;
+
+public class EmployeeJdbcImpl implements EmployeeDAO{
+
+	@Override
+	public boolean addEmployee(Connection connection, Employee employee) throws Exception {
+		PreparedStatement statement=connection.prepareStatement(INSERT_QRY);
+		statement.setString(1, employee.getName());
+		
+		LocalDate localDate=employee.getHiredDate();
+		Date dateOfJoining=DateConversion.convertToSQLDate(localDate);
+		statement.setDate(2, dateOfJoining);
+		statement.setString(3, employee.getGrade()+"");
+		statement.setDouble(4, employee.getBasicSalary());
+		statement.setString(5, employee.getGender().toString());
+		
+		
+		
+		return false;
+	}
+
+	@Override
+	public boolean updateEmployee(Connection connection, Employee employee) throws Exception {
+		
+		return false;
+	}
+
+	@Override
+	public boolean deleteEmployee(Connection connection, Employee employee) throws Exception {
+		
+		return false;
+	}
+
+	@Override
+	public Employee findEmployee(Connection connection, int empId) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Employee> findAllEmployees(Connection connection) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

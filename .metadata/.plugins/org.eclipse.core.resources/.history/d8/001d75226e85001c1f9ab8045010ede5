@@ -1,0 +1,11 @@
+package com.zensar.training.ui;
+
+import com.zensar.training.bean.Circle;
+
+public class Main1 {
+	public static void main(String[] args) {
+		
+		Circle circle=new Circle(10);
+
+	}
+}

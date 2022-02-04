@@ -1,0 +1,11 @@
+package com.zensar.training.ui;
+
+public class JDBCConnection implements Runnable{
+
+	@Override
+	public void run() {
+		
+		
+	}
+
+}

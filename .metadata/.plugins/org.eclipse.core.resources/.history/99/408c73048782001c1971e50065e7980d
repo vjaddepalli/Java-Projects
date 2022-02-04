@@ -1,0 +1,22 @@
+package com.zensar.training.ui;
+
+import com.zensar.training.bean.Executable;
+
+public class Main3 {
+
+	public static void main(String[] args) {
+		Executable executable;
+
+		executable = (Integer obj,String str) -> {
+			System.out.println(obj.intValue());
+		};
+		executable.execute(25);
+
+		executable = (Integer obj) -> {
+			System.out.println(obj.doubleValue());
+		};
+		executable.execute(35);
+
+	}
+
+}

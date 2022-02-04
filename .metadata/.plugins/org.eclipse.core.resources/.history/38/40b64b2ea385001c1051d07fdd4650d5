@@ -1,0 +1,7 @@
+package com.zensar.training.ui;
+
+public class BankAccount {
+	
+	private int balance;
+
+}

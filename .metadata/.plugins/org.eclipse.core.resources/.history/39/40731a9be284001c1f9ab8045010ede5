@@ -1,0 +1,33 @@
+package com.zensar.training.ui;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.LinkedList;
+import java.util.List;
+
+import com.zensar.training.bean.Customer;
+
+public class Main7 {
+
+	public static void main(String[] args) throws IOException {
+
+		RandomAccessFile accessFile = new RandomAccessFile("customers.dat", "rw");
+		List<Customer> customers = new LinkedList<>();
+
+		while (true) {
+			try {
+				String name = accessFile.readUTF();
+				double balance = accessFile.readDouble();
+				String city = accessFile.readUTF();
+				System.out.println(name + ", " + balance + ", " + city);
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+				return;
+			} 
+
+		}
+
+	}
+
+}

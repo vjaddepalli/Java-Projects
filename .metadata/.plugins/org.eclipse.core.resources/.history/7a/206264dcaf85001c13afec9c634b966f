@@ -1,0 +1,12 @@
+package com.zensar.training.ui;
+
+public class Main9 {
+
+	public static void main(String[] args) {
+		
+		Thread t1=new Thread(new GoodByeTask());
+		t1.setDaemon(true);
+
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class Account {
+	
+	double balance;
+	int typeOfAccount; //1 or 2
+	double interestAmount;
+	
+	double getInterestAmount(){
+		
+		if(typeOfAccount==1)
+			 interestAmount =balance*0.35;
+		if(typeOfAccount==2)
+			interestAmount = balance*0.45;
+		
+	}
+
+}

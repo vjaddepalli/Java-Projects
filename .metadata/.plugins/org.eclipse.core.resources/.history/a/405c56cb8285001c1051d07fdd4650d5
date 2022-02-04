@@ -1,0 +1,13 @@
+package com.zensar.training.ui;
+
+public class CityPrintingThread extends Thread {
+	
+	@Override
+	public void run() {
+		String []cityNames= {"Mumbai","Delhi","kolkata"};
+		for(String city:cityNames) {
+			System.out.println(city);
+		}
+	}
+
+}

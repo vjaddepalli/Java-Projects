@@ -1,0 +1,17 @@
+package com.zensar.training.ui;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Main1 {
+	public static void main(String[] args) throws IOException {
+		InputStream is;
+		is=new FileInputStream("intro.txt");
+		char ch=(char) is.read();
+		System.out.println(ch);
+		is.close();
+
+	}
+}

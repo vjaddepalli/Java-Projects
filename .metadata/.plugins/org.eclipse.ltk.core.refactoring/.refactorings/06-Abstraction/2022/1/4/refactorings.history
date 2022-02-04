@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;07-Encapsulation/src&apos;&#x0D;&#x0A;- Original project: &apos;06-Abstraction&apos;&#x0D;&#x0A;- Destination element: &apos;07-Encapsulation/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     EmpClient.java&#x0D;&#x0A;     Circle.java&#x0D;&#x0A;     CircleClient.java&#x0D;&#x0A;     Employee.java" description="Copy compilation units" destination="=07-Encapsulation/src" element1="/src&lt;{EmpClient.java" element2="/src&lt;{Circle.java" element3="/src&lt;{CircleClient.java" element4="/src&lt;{Employee.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1642667981598" units="4" version="1.0"/>
+</session>

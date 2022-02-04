@@ -1,0 +1,19 @@
+package com.zensar.training.ui;
+
+import java.time.LocalTime;
+
+public class Main4 {
+
+	public static void main(String[] args) {
+		LocalTime localTime = LocalTime.now();
+		System.out.println(localTime);
+		System.out.println(localTime.getHour());
+		System.out.println(localTime.getMinute());
+		System.out.println(localTime.getSecond());
+		
+		LocalTime lunchBreak=localTime.plusMinutes(45);
+		System.out.println(lunchBreak);
+
+	}
+
+}

@@ -1,0 +1,22 @@
+
+public class Circle {
+	int radius;
+
+	public int getRadius() {
+		return radius;
+	}
+
+	public void setRadius(int radius) {
+		this.radius = radius;
+	}
+
+	Circle() {
+
+	}
+
+	double getArea() {
+		final double PI = 3.14;
+		return PI * this.radius * this.radius;
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.zensar.training.bean;
+
+public class Contact {
+	
+	String email;
+	String phone;
+
+}

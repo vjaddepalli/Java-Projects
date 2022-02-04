@@ -1,0 +1,16 @@
+package com.zensar.training.ui;
+
+import java.io.FileNotFoundException;
+import java.io.RandomAccessFile;
+
+public class Main3 {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		RandomAccessFile accessFile;
+		
+		accessFile=new RandomAccessFile("intro.txt", "r");
+
+	}
+
+}

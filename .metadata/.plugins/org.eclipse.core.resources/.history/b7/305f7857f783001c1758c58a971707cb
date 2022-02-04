@@ -1,0 +1,67 @@
+package com.zensar.training.client;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+
+		// Step1: load driver class
+		try {
+
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.println("Driver Loaded...");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		// Step2: Connect to Database
+		Connection connection = null;
+		String url = "jdbc:mysql://localhost:3306/TrainingDB";
+		String username = "root";
+		String password = "root";
+
+		try {
+			connection = DriverManager.getConnection(url, username, password);
+			System.out.println("Connection established");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		Statement statement = null;
+		try {
+			statement = connection.createStatement();
+			System.out.println("Satement Created");
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+
+		String SQL = "select * from temployees";
+
+		ResultSet rs = null;
+
+		try {
+			rs = statement.executeQuery(SQL);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			while(rs.next()) {
+				System.out.println(rs.getInt(1)+" , ");
+				System.out.println(rs.getString(2)+" , ");
+				java.sql.Date doj=rs.getDate(3);
+				System.out.println(rs.getD);
+				
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;51-JDBC&apos; to &apos;51-Jdbc&apos;" description="Rename resource &apos;51-JDBC&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/51-JDBC" name="51-Jdbc" stamp="1643775005290" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;53-Serilization&apos; to &apos;53-Serialization&apos;" description="Rename resource &apos;53-Serilization&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/53-Serilization" name="53-Serialization" stamp="1643946707697" updateReferences="true"/>
+</session>

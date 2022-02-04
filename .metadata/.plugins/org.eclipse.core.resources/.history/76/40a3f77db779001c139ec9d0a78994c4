@@ -1,0 +1,11 @@
+
+public class CircleClient {
+
+	public static void main(String[] args) {
+		
+		Circle c1;
+		c1=new Circle();
+
+	}
+
+}

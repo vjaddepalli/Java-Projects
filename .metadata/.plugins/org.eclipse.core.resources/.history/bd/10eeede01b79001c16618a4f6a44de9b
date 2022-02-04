@@ -1,0 +1,19 @@
+
+public class Variables {
+
+	int v1; //instance variable
+	static int v2; //global variable
+	public static void main(String[] args) {
+		
+		int age; //local variable
+
+	}
+	public void demo() {
+		int a;
+		a=100;
+		System.out.println(a);
+		System.out.println(v1);
+		System.out.println(v2);
+	}
+
+}
