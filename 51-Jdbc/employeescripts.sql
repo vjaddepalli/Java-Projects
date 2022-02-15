@@ -9,3 +9,5 @@ create table TEMPLOYEES(
 	GENDER char(1)  not null,
 	constraint emp_id_pk primary key(ID)
 );
+
+select sum(basic_salary) from TEMPLOYEES;

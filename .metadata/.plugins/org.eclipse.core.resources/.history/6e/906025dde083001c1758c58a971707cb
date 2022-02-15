@@ -1,9 +1,0 @@
-package com.zensar.training.client;
-
-public class Main {
-
-	public static void main(String[] args) {
-
-	}
-
-}

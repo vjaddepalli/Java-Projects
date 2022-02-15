@@ -1,5 +1,0 @@
-package com.zensar.training.db;
-
-public class EmployeeJdbcImpl implements EmployeeDAO{
-
-}

@@ -21,6 +21,10 @@ public class Main1 {
 		Map<Gender, List<Student>> studentsByGenderMap;
 		studentsByGenderMap=students.stream().collect(Collectors.groupingBy(Student::getGender));
 		System.out.println(studentsByGenderMap);
+		
+		Map<Boolean, List<Student>> partition;
+		partition=students.stream().collect(Collectors.partitioningBy(s->s.getAverageMark()>80));
+		System.out.println(partition);
 
 	}
 }
