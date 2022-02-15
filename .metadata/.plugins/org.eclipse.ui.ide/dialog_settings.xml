@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="installedFeatures">
+<<<<<<< HEAD
 		<item value="com.coderplus.m2e.jaxws:0.0.1.201505100425"/>
 		<item value="com.coderplus.m2e.remoteresourcesfeature:0.0.1.201411160138"/>
 		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201410161303"/>
 		<item value="de.theit.m2e.axistools.feature:1.2.0.201410211454"/>
 		<item value="net.mihai-nita.ansicon:1.4.6.202112080311"/>
 		<item value="org.basepom.m2e.apache_axis2_wsdl2code.feature:1.1.0"/>
+=======
+		<item value="com.ianbrandt.tools.m2e.mdp.feature:0.0.4.201409291703"/>
+		<item value="net.mihai-nita.ansicon:1.4.6.202112080311"/>
+>>>>>>> 36dc4e1e13a1378f710640c7d651db7f9ad2d567
 		<item value="org.eclipse.buildship:3.1.5.v20210113-0929"/>
 		<item value="org.eclipse.egit.gitflow.feature:6.0.0.202111291000-r"/>
 		<item value="org.eclipse.egit:6.0.0.202111291000-r"/>
@@ -64,7 +69,7 @@
 	</section>
 	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
 		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/52-JdbcApp/src/com/zensar/training/db/DateConversion.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
 		<item key="ShowDerived" value="false"/>
 		<item key="FilterByLocation" value="false"/>
 		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
