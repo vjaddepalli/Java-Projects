@@ -30,12 +30,14 @@ public class MenuHandler {
 	}
 	
 	public void dispatch() {
+		UIModule uiModule=new UIModule();
+		
 		switch(this.choice) {
-		case 1:UIModule.addInfo();break;
-		case 2:UIModule.updateInfo();break;
-		case 3:UIModule.searchInfo();break;
-		case 4:UIModule.listInfo();break;
-		case 5:UIModule.deleteInfo();break;
+		case 1:uiModule.addInfo();break;
+		case 2:uiModule.updateInfo();break;
+		case 3:uiModule.searchInfo();break;
+		case 4:uiModule.listInfo();break;
+		case 5:uiModule.deleteInfo();break;
 		case 6:System.out.println("\t\t\t Thank you");
 				System.exit(0);
 		}

@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Messages</title>
+</head>
+<body>
+	<a th:href="@{/message/create}">Create Message</a>
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Action</th>
+		</tr>
+		<tr th:each="m:${messages}">
+			<td th:text="${m.id}"></td>
+			<td th:text="${m.name}"></td>
+			<td><a th:href="@{/message/delete(id=${m.id})}">Delete</a></td>
+			<td><a>Update</a></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!--In following line we are adding the namespace so that we can use thymeleaf custom tags in HTML-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>CREATE</title>
+</head>
+
+<body>
+	<h1>In Create</h1>
+	<form method="POST" th:action="@{/message/add}" th:object="${message}">
+		ID:<input type="text" placeholder="ID" th:field="*{id}"><br/><br/>
+		Message:<input type="text" placeholder="message" th:field="*{name}"><br/><br/>
+		<input type="submit" value="Create message">
+	</form>
+</body>
+
+</html>

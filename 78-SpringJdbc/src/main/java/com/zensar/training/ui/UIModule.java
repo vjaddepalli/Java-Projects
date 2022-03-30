@@ -5,20 +5,40 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
 import com.zensar.training.bean.Employee;
 import com.zensar.training.bean.Gender;
+import com.zensar.training.bean.JdbcConfig;
+import com.zensar.training.db.DBConnectionFactory;
+import com.zensar.training.db.EmployeeDAO;
+import com.zensar.training.db.EmployeeJdbcImpl;
 import com.zensar.training.service.EmployeeService;
 import com.zensar.training.service.EmployeeServiceImpl;
 
 public class UIModule {
+	
 	private static void blankLines(int num) {
 		for (int i = 1; i <= num; i++)
 			System.out.println();
 	}
 
 	public static void addInfo() {
+		
+		JdbcConfig config=new JdbcConfig();
+		DataSource datasource=config.dataSource();
+		
+		
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(datasource);
+		
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
+		
 
 		String name = prompter.promptForStringInput("Enter Name");
 		char grade = prompter.promptForCharInput("Enter Grade[A,B,C]");
@@ -36,7 +56,7 @@ public class UIModule {
 
 		EmployeeService empService = new EmployeeServiceImpl();
 		try {
-			boolean result = empService.addEmployee(emp);
+			boolean result = empService.addEmployee(jdbcTemplate,emp);
 			if (result == true)
 				System.out.println("\t\t Added Successfully");
 			else
@@ -51,11 +71,16 @@ public class UIModule {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
 		Employee employee = new Employee();
+		JdbcConfig config=new JdbcConfig();
+		DataSource datasource=config.dataSource();
+		
+		
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(datasource);
 
 		int editableID = prompter.promptForIntInput("Enter ID to Update");
 		EmployeeService empService = new EmployeeServiceImpl();
 		try {
-			employee = empService.findEmployee(editableID);
+			employee = empService.findEmployee(jdbcTemplate,editableID);
 			if (employee == null) {
 				System.out.println("Employee Id does not exists");
 				return;
@@ -78,7 +103,7 @@ public class UIModule {
 		employee.setGender(gender);
 
 		try {
-			boolean result = empService.updateEmployee(employee);
+			boolean result = empService.updateEmployee(jdbcTemplate,employee);
 			if (result == true)
 				System.out.println("\t\t Updated Successfully");
 			else
@@ -91,6 +116,11 @@ public class UIModule {
 	public static void searchInfo() {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
+		JdbcConfig config=new JdbcConfig();
+		DataSource datasource=config.dataSource();
+		
+		
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(datasource);
 		int searchId = prompter.promptForIntInput("Enter ID to Search");
 
 		Consumer<Employee> consumer = (e) -> {
@@ -104,7 +134,7 @@ public class UIModule {
 
 		EmployeeService empService = new EmployeeServiceImpl();
 		try {
-			Employee employee = empService.findEmployee(searchId);
+			Employee employee = empService.findEmployee(jdbcTemplate,searchId);
 			if (employee == null) {
 				System.out.println("Employee not found");
 				return;
@@ -120,6 +150,11 @@ public class UIModule {
 	public static void listInfo() {
 		blankLines(3);
 		List<Employee> employees = new ArrayList<>();
+		JdbcConfig config=new JdbcConfig();
+		DataSource datasource=config.dataSource();
+		
+		
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(datasource);
 		EmployeeService empService = new EmployeeServiceImpl();
 		Consumer<Employee> consumer = (e) -> {
 			System.out.printf("%-5d", e.getId());
@@ -131,7 +166,7 @@ public class UIModule {
 			System.out.println();
 		};
 		try {
-			employees = empService.findAllEmployees();
+			employees = empService.findAllEmployees(jdbcTemplate);
 
 		} catch (Exception e2) {
 
@@ -142,11 +177,16 @@ public class UIModule {
 	public static void deleteInfo() {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
+		JdbcConfig config=new JdbcConfig();
+		DataSource datasource=config.dataSource();
+		
+		
+		JdbcTemplate jdbcTemplate=new JdbcTemplate(datasource);
 		int searchId = prompter.promptForIntInput("Enter ID to Delete");
 		boolean result = false;
 		EmployeeService empService = new EmployeeServiceImpl();
 		try {
-			result = empService.deleteEmployee(new Employee(searchId));
+			result = empService.deleteEmployee(jdbcTemplate,new Employee(searchId));
 
 		} catch (Exception e) {
 			e.printStackTrace();

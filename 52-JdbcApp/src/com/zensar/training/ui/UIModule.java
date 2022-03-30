@@ -11,12 +11,12 @@ import com.zensar.training.service.EmployeeService;
 import com.zensar.training.service.EmployeeServiceImpl;
 
 public class UIModule {
-	private static void blankLines(int num) {
+	private void blankLines(int num) {
 		for (int i = 1; i <= num; i++)
 			System.out.println();
 	}
 
-	public static void addInfo() {
+	public void addInfo() {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
 
@@ -47,7 +47,7 @@ public class UIModule {
 
 	}
 
-	public static void updateInfo() {
+	public  void updateInfo() {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
 		Employee employee = new Employee();
@@ -88,7 +88,7 @@ public class UIModule {
 		}
 	}
 
-	public static void searchInfo() {
+	public  void searchInfo() {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
 		int searchId = prompter.promptForIntInput("Enter ID to Search");
@@ -117,7 +117,7 @@ public class UIModule {
 
 	}
 
-	public static void listInfo() {
+	public  void listInfo() {
 		blankLines(3);
 		List<Employee> employees = new ArrayList<>();
 		EmployeeService empService = new EmployeeServiceImpl();
@@ -139,7 +139,7 @@ public class UIModule {
 		employees.stream().forEach(consumer);
 	}
 
-	public static void deleteInfo() {
+	public void deleteInfo() {
 		blankLines(3);
 		InputPrompter prompter = new InputPrompter();
 		int searchId = prompter.promptForIntInput("Enter ID to Delete");

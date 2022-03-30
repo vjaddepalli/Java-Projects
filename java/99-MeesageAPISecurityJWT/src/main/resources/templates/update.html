@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>In Create</h1>
+	<form method="POST" th:action="@{/message/add}" th:object="${message}">
+		ID:<input type="text" placeholder="ID" th:field="*{id}"><br/><br/>
+		Message:<input type="text" placeholder="message" th:field="*{name}"><br/><br/>
+		<input type="submit" value="Create message">
+	</form>
+</body>
+</html>

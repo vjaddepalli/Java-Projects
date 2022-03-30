@@ -1,0 +1,27 @@
+<!--In following line we are adding the namespace so that we can use thymeleaf custom tags in HTML-->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Messages</title>
+</head>
+
+<body>
+	<table border="1">
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th colspan="2">Action</th>
+		</tr>
+		<!--Following is loop from thymeleaf where m is local var-->
+		<tr th:each="m:${messages}">
+			<td th:text="${m.id}"></td>
+			<td th:text="${m.name}"></td>
+			<!--In thymeleaf to write URL @{} syntax is used-->
+			<td><a th:href="@{/message/delete(id=${m.id})}">Delete</a></td>
+			<td><a th:href="@{/message/update}">Update</a></td>
+		</tr>
+	</table><br>
+	<a th:href="@{/message/create}">Create</a>
+</body>
+
+</html>

@@ -3,6 +3,9 @@ package com.zensar.training.db;
 import java.sql.Connection;
 import java.util.List;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.zensar.training.bean.Employee;
@@ -14,6 +17,8 @@ public interface EmployeeDAO {
 	String FIND_QRY = "select * from TEMPLOYEES where ID=?";
 	String FIND_ALL_QRY = "select * from TEMPLOYEES";
 
+	
+	
 	boolean addEmployee(JdbcTemplate jdbcTemplate, Employee employee) throws Exception;
 
 	boolean updateEmployee(JdbcTemplate jdbcTemplate, Employee employee) throws Exception;

@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -17,57 +18,39 @@ import com.zensar.training.db.DateConversion;
 import com.zensar.training.db.EmployeeDAO;
 import com.zensar.training.db.EmployeeJdbcImpl;
 
-public class EmployeeServiceImpl implements EmployeeDAO {
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	
+	EmployeeDAO dao=new EmployeeJdbcImpl();
 
 	@Override
 	public boolean addEmployee(JdbcTemplate jdbcTemplate, Employee employee) throws Exception {
-
-		boolean result = false;
-		Object[] rowData = { employee.getName(), employee.getHiredDate(), employee.getGrade(),
-				employee.getBasicSalary(), employee.getGender().toString().charAt(0) };
-		int r = jdbcTemplate.update(INSERT_QRY, rowData);
-		if (r == 0)
-			result = false;
-
-		return result;
+		
+		return dao.addEmployee(jdbcTemplate, employee); 
 	}
 
 	@Override
 	public boolean updateEmployee(JdbcTemplate jdbcTemplate, Employee employee) throws Exception {
-		boolean result = false;
-		Object[] rowData = { employee.getName(), employee.getHiredDate(), employee.getGrade(),
-				employee.getBasicSalary(), employee.getGender().toString().charAt(0) };
-		int r = jdbcTemplate.update(UPDATE_QRY, rowData);
-		if (r == 0)
-			result = false;
-
-		return result;
+		
+		return dao.updateEmployee(jdbcTemplate, employee);
 	}
 
 	@Override
 	public boolean deleteEmployee(JdbcTemplate jdbcTemplate, Employee employee) throws Exception {
-		boolean result = false;
-		Object[] data = { employee.getId() };
 
-		int r = jdbcTemplate.update(DELETE_QRY, data);
-		if (r == 0)
-			result = false;
-		return result;
+		return dao.deleteEmployee(jdbcTemplate, employee);
 	}
 
 	@Override
 	public Employee findEmployee(JdbcTemplate jdbcTemplate, int empId) throws Exception {
 
-		Employee employee = jdbcTemplate.queryForObject(FIND_QRY, new Object[] { empId }, new EmployeeRowMapper());
-		return employee;
+		return dao.findEmployee(jdbcTemplate, empId);
 	}
 
 	@Override
 	public List<Employee> findAllEmployees(JdbcTemplate jdbcTemplate) throws Exception {
 
-		List<Employee> employees = jdbcTemplate.query(FIND_ALL_QRY, new EmployeeRowMapper());
-
-		return employees;
+		return dao.findAllEmployees(jdbcTemplate);
 	}
 
 	private class EmployeeRowMapper implements RowMapper<Employee> {
